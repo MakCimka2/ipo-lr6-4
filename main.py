@@ -5,16 +5,16 @@
 #- Сортирует найденные строки в порядке их длины (от самой короткой к самой длинной) и выводит их.
 
 find = []
-find = input("Введите искомое: ")
+find = input("Введите искомое: ") # Вводим искомое
 file = "text.txt"
 count = 0
 split_find = []
 with open(file, "r", encoding="utf-8") as file1:
     for i in file1:
-        if find in i:
+        if find in i:#Находим количество искомых строк и сортированне строки
             split_find.append(i)
-            count += 1
-        else:
+            count += 1 
+        else:#Выводим все
             print("Строка не найдена")
 print(f"Количество искомых строк: {count}")
 print(f"Сортированые строки: {sorted(split_find)}")
